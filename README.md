@@ -1,6 +1,5 @@
 # 📈 Monte Carlo Pricing of Barrier Options  
 ### *Up-and-Out Call • Variance Reduction • Statistical Rigor*
-<<<<<<< HEAD
 by **Mikołaj Płóciniczak** [[LinkedIn]](https://www.linkedin.com/in/miko%C5%82aj-plociniczak/)
 
 ![hist](hist.png)
@@ -8,12 +7,6 @@ by **Mikołaj Płóciniczak** [[LinkedIn]](https://www.linkedin.com/in/miko%C5%8
 > “It’s not just about computing — it’s about computing **better**.”
 
 ---
-=======
-
-> “It’s not just about computing — it’s about computing **better**.”
-
-![Opis](hist.png)
->>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
 
 ## 🎯 Project Goal
 
@@ -41,10 +34,6 @@ This project focuses not only on *how to compute*, but on *how to compute effici
 ---
 
 ## 🏗️ Project Structure
-<<<<<<< HEAD
-=======
-
->>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
 ```
 ├── models/ # stochastic process simulation
 ├── payoffs/ # option payoff definitions
@@ -55,19 +44,11 @@ This project focuses not only on *how to compute*, but on *how to compute effici
 ├── notebooks/ # report / analytical write-up
 ```
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
 ---
 
 ## ⚙️ What happens under the hood?
 
-<<<<<<< HEAD
 ![error](error.png)
-=======
-![opis](error.png)
->>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
 
 ### 1. 🔄 GBM Path Simulation
 - `models/simulate_gbm_paths.py`
@@ -171,7 +152,6 @@ python scripts/<selected_script>.py
 
 *(scripts are modular and self-documented in code)*
 
-<<<<<<< HEAD
 ---
 
 ## 🧾 Summary
@@ -196,26 +176,4 @@ If you're interested in:
 - variance reduction techniques
 - quantitative finance
 
-=======
-## 🧾 Summary
-
-This project addresses a key question:
-
->How can we obtain better estimators under the same computational budget?
-
-And answers it in a way that is:
-
-- systematic
-- measurable
-- reproducible
-
-## 🤝 Contact
-
-If you're interested in:
-
-- Monte Carlo methods
-- variance reduction techniques
-- quantitative finance
-
->>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
 → feel free to reach out.
