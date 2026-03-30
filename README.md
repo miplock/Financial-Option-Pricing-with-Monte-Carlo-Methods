@@ -1,53 +1,221 @@
-# Monte Carlo Project 2
+# 📈 Monte Carlo Pricing of Barrier Options  
+### *Up-and-Out Call • Variance Reduction • Statistical Rigor*
+<<<<<<< HEAD
+by **Mikołaj Płóciniczak** [[LinkedIn]](https://www.linkedin.com/in/miko%C5%82aj-plociniczak/)
 
-Project for pricing an up-and-out call option using Monte Carlo
-and comparing estimator variants: crude, stratified, antithetic,
-control variate. It also includes scripts for generating plots
-and notebooks with experiments.
+![hist](hist.png)
 
-## Quick start
+> “It’s not just about computing — it’s about computing **better**.”
+
+---
+=======
+
+> “It’s not just about computing — it’s about computing **better**.”
+
+![Opis](hist.png)
+>>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
+
+## 🎯 Project Goal
+
+This project implements pricing of an exotic **up-and-out call option** using Monte Carlo simulation and systematically compares the quality of different estimators.
+
+This is not just another pricing script — it is a **statistical laboratory**, where we evaluate:
+
+- 📉 **bias**
+- 📊 **MSE (mean squared error)**
+- 🎯 **coverage (confidence interval accuracy)**
+- ⚡ **variance reduction factor (VRF)**
+
+---
+
+## 🧠 Why it matters
+
+In real-world financial applications (e.g. risk modeling or pricing in institutions):
+
+- computational budget is limited  
+- estimators must be **stable and reliable**  
+- decisions rely on **statistically sound outputs**
+
+This project focuses not only on *how to compute*, but on *how to compute efficiently and robustly*.
+
+---
+
+## 🏗️ Project Structure
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
+```
+├── models/ # stochastic process simulation
+├── payoffs/ # option payoff definitions
+├── methods/ # Monte Carlo estimators
+├── scripts/ # experimental pipeline
+├── data/ # stored results (pickle)
+├── plots/ # visualization data
+├── notebooks/ # report / analytical write-up
+```
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
+---
+
+## ⚙️ What happens under the hood?
+
+<<<<<<< HEAD
+![error](error.png)
+=======
+![opis](error.png)
+>>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
+
+### 1. 🔄 GBM Path Simulation
+- `models/simulate_gbm_paths.py`
+- accelerated with **Numba**
+- efficient simulation of geometric Brownian motion trajectories
+
+---
+
+### 2. 🚧 Barrier Payoff Evaluation
+- `payoffs/payoff_up_and_out_call.py`
+- option is knocked out if the barrier is breached
+
+---
+
+### 3. 🧮 Monte Carlo Estimators (`methods/`)
+
+Implemented approaches:
+
+| Method              | Idea |
+|---------------------|------|
+| `crude`             | standard Monte Carlo |
+| `stratified`        | improved sampling coverage |
+| └─ Neyman allocation | variance-optimal allocation |
+| `antithetic`        | variance reduction via symmetry |
+| `control variate`   | leveraging known correlations |
+
+---
+
+### 4. 🧪 Experimental Pipeline (`scripts/`)
+
+Scripts:
+
+- 🔁 generate **multiple estimator replications**
+- 📊 compute:
+  - bias
+  - MSE
+  - coverage
+- ⚖️ build **VRF (variance reduction factor) tables**
+- 📉 produce:
+  - histograms
+  - boxplots
+- 🎯 compute reference value `I_ref` via large-scale crude MC (chunked)
+
+---
+
+## 📦 Outputs
+
+Stored as:
+
+- `data/*.pkl` → experimental data  
+- `plots/*.pkl` → visualization-ready data  
+
+The setup supports:
+- reproducibility  
+- offline analysis  
+- extensibility  
+
+---
+
+## 📊 Nature of the Project
+
+This is not just an implementation — it is a:
+
+- 🧠 **statistical experiment**
+- ⚙️ **methodological benchmark**
+- 📈 **estimator quality analysis**
+- 📚 **structured analytical report** (see `notebooks/`)
+
+---
+
+## 💡 What makes this project stand out?
+
+- ✅ focus on **estimation quality**, not just results  
+- ✅ consistent comparison across methods  
+- ✅ aligned with **quantitative finance practices**  
+- ✅ clear separation of concerns:
+  - model  
+  - payoff  
+  - estimator  
+  - experiment  
+
+---
+
+## 🧑‍💼 Target Applications
+
+Relevant for:
+
+- quantitative finance  
+- risk modeling  
+- exotic option pricing  
+- Monte Carlo analysis  
+
+---
+
+## 🚀 How to run
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
+python scripts/<selected_script>.py
 ```
 
-## Running
+*(scripts are modular and self-documented in code)*
 
-Estimator value vs. number of paths R:
+<<<<<<< HEAD
+---
 
-```bash
-python plots/plot_estimator_vs_R.py --method crude --output plots/estimator_vs_R.html
-```
+## 🧾 Summary
 
-Comparison of all estimators (saved as a Plotly .pkl object):
+This project addresses a key question:
 
-```bash
-python scripts/generate_estimators_plot.py --output plots/estimators_vs_R.pkl
-```
+>How can we obtain better estimators under the same computational budget?
 
-Visualization of sample GBM trajectories (opens a plot window):
+And answers it in a way that is:
 
-```bash
-python scripts/trajectories_plot.py
-```
+- systematic
+- measurable
+- reproducible
 
-## Project structure
+---
 
-- `methods/` - Monte Carlo estimator implementations
-- `models/` - process simulation (GBM)
-- `payoffs/` - payoff functions (barrier option)
-- `parameters.py` - default parameters
-- `plots/` - generated plots and scripts to create them
-- `notebooks/` - notebooks (split into `plots/`, `parameters/`, `general/`)
+## 🤝 Contact
 
-## Notebooks
+If you're interested in:
 
-Notebooks are grouped in `notebooks/` by topic:
-plots (`notebooks/plots/`), parameters (`notebooks/parameters/`),
-general sketches (`notebooks/general/`).
+- Monte Carlo methods
+- variance reduction techniques
+- quantitative finance
 
-## Documentation
+=======
+## 🧾 Summary
 
-The assignment and partial results are described in `MC_2025_P2.pdf`.
+This project addresses a key question:
+
+>How can we obtain better estimators under the same computational budget?
+
+And answers it in a way that is:
+
+- systematic
+- measurable
+- reproducible
+
+## 🤝 Contact
+
+If you're interested in:
+
+- Monte Carlo methods
+- variance reduction techniques
+- quantitative finance
+
+>>>>>>> 1af15bf (Add README enhancements, new images, and update experiment notebook)
+→ feel free to reach out.
